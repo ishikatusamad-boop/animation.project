@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Academy | Cricket Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="join-style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">CRICKET<span>PRO</span></div>
+        <a href="index.html" class="back-btn">← Home</a>
+    </nav>
+
+    <section class="join-container">
+        <div class="join-form-card">
+            <h2>Join the <span>Academy</span></h2>
+            <p>Fill out the form below to start your journey with the legends.</p>
+
+            <form id="academyForm">
+                <div class="input-group">
+                    <input type="text" id="userName" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="userEmail" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <textarea id="userMessage" placeholder="Tell us about your cricketing journey" required></textarea>
+                </div>
+                <button type="submit" class="cta-full">Send Message</button>
+            </form>
+            <div id="statusMessage"></div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('academyForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Create the message object
+            const registration = {
+                name: document.getElementById('userName').value,
+                email: document.getElementById('userEmail').value,
+                message: document.getElementById('userMessage').value,
+                date: new Date().toLocaleString()
+            };
+
+            // Get existing messages or start a new list
+            let messages = JSON.parse(localStorage.getItem('academyMessages')) || [];
+            messages.push(registration);
+
+            // Save back to Local Storage
+            localStorage.setItem('academyMessages', JSON.stringify(messages));
+
+            // Show Success
+            const status = document.getElementById('statusMessage');
+            status.innerHTML = "✅ Message Sent Successfully! We will contact you soon.";
+            status.style.color = "#2ecc71";
+
+            // Clear Form
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

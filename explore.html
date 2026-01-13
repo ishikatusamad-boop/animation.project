@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | Cricket Pro Legends</title>
+    <link rel="stylesheet" href="explore-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="explore-nav">
+        <div class="logo">CRICKET<span>PRO</span></div>
+        <a href="index.html" class="back-btn">← Home</a>
+    </nav>
+
+    <header class="explore-header">
+        <h1>Explore the <span>Cricket World</span></h1>
+        <p>Deep dive into the archives of legends, techniques, and historic stadiums.</p>
+    </header>
+
+    <main class="explore-grid">
+        <div class="explore-card">
+            <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&q=80&w=600"
+                alt="Batting">
+            <div class="card-overlay">
+                <h3>Batting Masterclass</h3>
+                <p>Learn the cover drive from the masters of the game.</p>
+                <button class="read-btn">View Gallery</button>
+            </div>
+        </div>
+
+        <div class="explore-card">
+            <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=600"
+                alt="Stadium">
+            <div class="card-overlay">
+                <h3>Historic Venues</h3>
+                <p>The stories behind Lord's, MCG, and Eden Gardens.</p>
+                <button class="read-btn">View Gallery</button>
+            </div>
+        </div>
+
+        <div class="explore-card">
+            <img src="https://images.unsplash.com/photo-1593341646782-e0b495cff86d?auto=format&fit=crop&q=80&w=600"
+                alt="Bowling">
+            <div class="card-overlay">
+                <h3>The Art of Spin</h3>
+                <p>Deception, flight, and turn: The wizardry of spin bowling.</p>
+                <button class="read-btn">View Gallery</button>
+            </div>
+        </div>
+
+        <div class="explore-card">
+            <img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?auto=format&fit=crop&q=80&w=600"
+                alt="Trophy">
+            <div class="card-overlay">
+                <h3>World Cup Glory</h3>
+                <p>Relive the most iconic finals in cricketing history.</p>
+                <button class="read-btn">View Gallery</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Simple entrance animation
+        gsap.from(".explore-card", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            stagger: 0.2,
+            ease: "power2.out"
+        });
+    </script>
+</body>
+
+</html>

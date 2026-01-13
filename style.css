@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #0b0b0b;
+    color: white;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Nav Link Styling */
+ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+ul li a:hover {
+    color: #2ecc71;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&q=80&w=1470') center/cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10%;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #2ecc71;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.hero-content {
+    margin-top: 100px;
+    padding-left: 10%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: #2ecc71;
+}
+
+.cta {
+    padding: 15px 35px;
+    background: #2ecc71;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.ball {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle at 30% 30%, #ff4d4d, #b30000);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50px;
+    right: -100px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.info-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    border-left: 5px solid #2ecc71;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.about-section {
+    padding: 100px 10%;
+    background-color: #0b0b0b;
+    overflow: hidden;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-image,
+.about-text {
+    flex: 1;
+    min-width: 350px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: #2ecc71;
+    padding: 20px;
+    border-radius: 15px;
+    color: #000;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    background: #1a1a1a;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.stat-box h2 {
+    font-size: 3rem;
+    color: #2ecc71;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 50px 0;
+}
+
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 10%;
+}
+
+.player-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.player-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #111;
+    background-size: cover;
+}
+
+.player-img.virat {
+    background-image: url(virat.jpg);
+}
+
+.player-img.jasprit {
+    background-image: url(jasprit.jpg);
+}
+
+.player-img.hardik {
+    background-image: url(hardik.jpg);
+}
+
+.contact-section {
+    padding: 100px 10%;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 15px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+}
